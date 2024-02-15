@@ -1,6 +1,34 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     background-color: #edd6af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#quiz-container{
+    text-align: center;
+    background-color: #edd6af;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.Question{
+    text-align: center;
+    background-color: #edd6af;
+    color: green;
+}
+input {
+    padding: 10px;
+    margin-top: 10px;
+}
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#result {
+    font-weight: bold;
+    margin-top: 10px;
 }
