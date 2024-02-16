@@ -8,27 +8,74 @@ body {
     justify-content: center;
     height: 100vh;
 }
-#quiz-container{
-    text-align: center;
+#quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
     background-color: #edd6af;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: #7d7d7c;
 }
-.Question{
-    text-align: center;
+h1{
+    color: black;
+    position: relative;
+    right: 250px;
+}
+p{
+    color: black;
+    position: relative;
+    margin-top: 0;
+    right: 250px;
+}
+#question-container {
     background-color: #edd6af;
+    padding: 20px;
+    border: #fff;
+    border-radius: 10px;
+
+}
+#question {
+    font-size: 18px;
     color: green;
+    text-align: center;
+    left: 5px;
+}
+#answer {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
 }
 input {
-    padding: 10px;
-    margin-top: 10px;
+
 }
-button {
-    padding: 10px;
-    margin-top: 10px;
+.fa-microphone {
+    font-size: 25px;
+    color: black;
     cursor: pointer;
+    left: 2px;
 }
-#result {
-    font-weight: bold;
-    margin-top: 10px;
+.btn-container {
+    text-align: center;
+}
+#check-btn {
+    padding: 10px ;
+    margin: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+}
+#next-btn {
+    align-items: center;
+    padding: 10px ;
+    margin: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+}
+#check-btn:hover, #next-btn:hover {
+    background-color: rgb(196, 193, 193);
 }
