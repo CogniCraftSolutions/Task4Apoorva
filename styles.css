@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #edd6af;
+    background-color: #e0e1c4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,7 @@ body {
 #quiz-container {
     max-width: 600px;
     margin: 50px auto;
-    background-color: #edd6af;
+    background-color: #e0e1c4;
     padding: 20px;
     border-radius: 10px;
     box-shadow: #7d7d7c;
@@ -19,40 +19,49 @@ body {
 h1{
     color: black;
     position: relative;
-    right: 250px;
 }
 p{
     color: black;
     position: relative;
     margin-top: 0;
-    right: 250px;
 }
 #question-container {
-    background-color: #edd6af;
-    padding: 20px;
+    background-color: #e0e1c4;
+    padding: 15px;
     border: #fff;
-    border-radius: 10px;
-
 }
 #question {
     font-size: 18px;
     color: green;
     text-align: center;
     left: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px #888888;
 }
 #answer {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    left: 0px;
+    box-shadow: 2px 2px #888888;
 }
 input {
-
+    background-color: #e0e1c4;
+    padding: 20px;
+    border: #fff;
+    border-radius: 10px;
+    position: relative;
+    left: 160px;
 }
 .fa-microphone {
     font-size: 25px;
     color: black;
     cursor: pointer;
-    left: 2px;
+    position: relative;
+    left: 250px;
 }
 .btn-container {
     text-align: center;
@@ -64,7 +73,8 @@ input {
     cursor: pointer;
     background-color: #fff;
     color: black;
-    border-radius: 10px;
+    border-radius: 15px;
+    width: 500px;
 }
 #next-btn {
     align-items: center;
@@ -74,7 +84,9 @@ input {
     cursor: pointer;
     background-color: #fff;
     color: black;
-    border-radius: 10px;
+    border-radius: 15px;
+    position: relative;
+    width: 500px;
 }
 #check-btn:hover, #next-btn:hover {
     background-color: rgb(196, 193, 193);
