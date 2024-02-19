@@ -13,14 +13,19 @@
             <p>Welcome in the English Quiz</p>
             <div id="question-container">
               <p id="question">वह स्कूल जाता है</p>
+              <div id="translation-container">
               <input type="text" id="answer" placeholder="Click on Speak to answer">
+              </div>
             </div>
-            <i class="fa-solid fa-microphone"></i>
+          
+            <button onclick="voice()">
+              <i class="fa-solid fa-microphone"></i>
+          </button>
             <div id="answer-buttons" class="btn-container">
-                <button id="check-btn" oneclick="checkAnswer()">Check</button>
+                <button id="check-btn" onclick="checkAnswer()">Check</button>
               </div>
             <div id="explanation"></div>
-            <button id="next-btn" oneclick="nextQuestion()">Next</button>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
           </div>
 
     <script src="script.js"></script>

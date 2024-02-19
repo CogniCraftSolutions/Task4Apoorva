@@ -1,26 +1,72 @@
-const questions = [
-    {
-        question: 'वह स्कूल जाता है',
-        correctAnswer: 'He goes to school.'
-    },
-    {
-        question: 'ट्रेन आ रही है',
-        correctAnswer: 'Train is arriving.'   
-    },
-    {
-        question: 'वह एक शरारती लड़का है',
-        correctAnswer: 'He is a naughty boy.'
-    },
-    {
-        question: 'जावास्क्रिप्ट एक महान भाषा है',
-        correctAnswer: 'JavaScript is a great language.'
-    },
-    {
-        question: 'वेब विकास महान है',
-        correctAnswer: 'Web Development is great.'
-    }
+
+var questions = [
+  { hindi: 'वह स्कूल जाता है', english: 'He goes to school' },
+  { hindi: 'ट्रेन आ रही है', english: 'Train is arriving' },
+  { hindi: 'वह एक शरारती लड़का है', english: 'He is a naughty boy' },
+  { hindi: 'जावास्क्रिप्ट एक महान भाषा है', english: 'JavaScript is a great language' },
+  { hindi: 'वेब विकास महान है', english: 'Web Development is great' },
 ];
 
-co
+var currentQuestionIndex = 0;
 
+function displayQuestion() {
+  var questionElement = document.getElementById('question');
+  var translationContainer = document.getElementById('translation-container');
+  var answerInput = document.getElementById('answer');
 
+  questionElement.textContent = questions[currentQuestionIndex].hindi;
+  translationContainer.innerHTML = '<input type="text" id="answer" placeholder="Click on Speak to answer">';
+  answerInput = document.getElementById('answer');
+}
+
+function checkAnswer() {
+  var userAnswer = document.getElementById('answer').value.toLowerCase();
+  var correctAnswer = questions[currentQuestionIndex].english;
+  var explanationContainer = document.getElementById('explanation');
+
+  if (userAnswer === correctAnswer.toLowerCase()) {
+    explanationContainer.innerHTML = 'Correct! Well done!';
+    nextButton.removeClassList("hidden");
+  } else {
+    explanationContainer.innerHTML = 'Incorrect. Try again!';
+    nextButton.removeClassList("hidden");
+     
+  }
+}
+
+function nextQuestion() {
+  currentQuestionIndex++;
+  var checkButton = document.getElementById('check-btn');
+  var nextButton = document.getElementById('next-btn');
+  var explanationContainer = document.getElementById('explanation');
+
+  if (currentQuestionIndex < questions.length) {
+    displayQuestion();
+    checkButton.disabled = false;
+    nextButton.addClassList("hidden");
+    explanationContainer.innerHTML = '';
+    explanationContainer.addClassList("hidden");
+  } else {
+    explanationContainer.innerHTML = 'Quiz completed!';
+    checkButton.disabled = true;
+    nextButton.addClassList("hidden");
+    explanationContainer.addClassList("hidden");
+  }
+}
+
+function voice() {
+  var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+  var answerInput = document.getElementById('answer');
+
+  recognition.lang = 'en-US';
+  recognition.onresult = function (event) {
+    var voiceAnswer = event.results[0][0].transcript.toLowerCase();
+    answerInput.value = voiceAnswer;
+  };
+
+  recognition.start();
+}
+
+displayQuestion();
+
+  

@@ -56,12 +56,17 @@ input {
     position: relative;
     left: 160px;
 }
+button {
+    background-color: #e0e1c4 ;
+    position: relative;
+    left: 250px;
+}
 .fa-microphone {
     font-size: 25px;
     color: black;
     cursor: pointer;
     position: relative;
-    left: 250px;
+    left: 0;
 }
 .btn-container {
     text-align: center;
@@ -75,6 +80,8 @@ input {
     color: black;
     border-radius: 15px;
     width: 500px;
+    position: relative;
+    left: 1px;
 }
 #next-btn {
     align-items: center;
@@ -86,8 +93,15 @@ input {
     color: black;
     border-radius: 15px;
     position: relative;
+    left: 1px;
     width: 500px;
 }
-#check-btn:hover, #next-btn:hover {
+#check-btn:hover {
     background-color: rgb(196, 193, 193);
+}
+#next-btn:hover {
+    background-color: rgb(196, 193, 193);
+}
+.hidden {
+    display: none;
 }
