@@ -60,6 +60,7 @@ input {
 button {
     background-color: #f4f4db;
     position: relative;
+    border: none;
     left: 250px;
 }
 .fa-microphone {
