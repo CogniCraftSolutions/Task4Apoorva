@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #e0e1c4;
+    background-color: #f4f4db;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,7 @@ body {
 #quiz-container {
     max-width: 600px;
     margin: 50px auto;
-    background-color: #e0e1c4;
+    background-color: #f4f4db;
     padding: 20px;
     border-radius: 10px;
     box-shadow: #7d7d7c;
@@ -26,7 +26,7 @@ p{
     margin-top: 0;
 }
 #question-container {
-    background-color: #e0e1c4;
+    background-color: #f4f4db;
     padding: 15px;
     border: #fff;
 }
@@ -43,13 +43,14 @@ p{
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
+    color: green;
     position: relative;
     text-align: center;
     left: 0px;
     box-shadow: 2px 2px #888888;
 }
 input {
-    background-color: #e0e1c4;
+    background-color: #f4f4db;
     padding: 20px;
     border: #fff;
     border-radius: 10px;
@@ -57,7 +58,7 @@ input {
     left: 160px;
 }
 button {
-    background-color: #e0e1c4 ;
+    background-color: #f4f4db;
     position: relative;
     left: 250px;
 }
@@ -82,6 +83,9 @@ button {
     width: 500px;
     position: relative;
     left: 1px;
+}
+.explanation {
+    border-radius: 15px;
 }
 #next-btn {
     align-items: center;
